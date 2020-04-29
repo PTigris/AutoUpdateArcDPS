@@ -3,7 +3,7 @@ Installs a new version of ArcDPS automatically.
 Instead of starting up Guild Wars 2 directly, you run AutoUpdateArcDPS.bat  
 
 How to install:  
-Place AutoUpdateArcDPS.bat and AutoUpdateArcDPS.ps1 in your Guild Wars 2 instalation folder, where the Gw2-64.exe is.  
+Place AutoUpdateArcDPS.bat and AutoUpdateArcDPS.ps1 in your Guild Wars 2 installation folder, where the Gw2-64.exe is.  
 AutoUpdateArcDPS.bat can be run with a shortcut or directly.  
 
 Working:  
