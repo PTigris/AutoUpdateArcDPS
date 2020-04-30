@@ -64,13 +64,12 @@ if (Test-Path ($Path+"\bin64")) {
 			"Cannot install while Guild Wars 2 is running."
 			$ReadTime = $ReadTime+2
 		} else {
-			$ValidDateFile = Test-Path ($Path+"\bin64\Last modified ArcDPS.txt")
-			if (!$ValidDateFile -and !(Test-Path ($Path+"\bin64\d3d9.dll"))) {
-				'"Last modified ArcDPS.txt" and d3d9.dll are not pressent. Welcome to ArcDPS!, installing...'
-			} elseif (!$ValidDateFile) {
+			if (Test-Path ($Path+"\bin64\Last modified ArcDPS.txt")) {
+				'Cannot find "d3d9.dll", installing...'
+			} elseif (Test-Path ($Path+"\bin64\d3d9.dll")) {
 				'Cannot find "Last modified ArcDPS.txt". Welcome to AutoUpdateArcDPS!'
 			} else {
-				'Cannot find "d3d9.dll", installing...'
+				'"Last modified ArcDPS.txt" and d3d9.dll are not pressent. Welcome to ArcDPS!, installing...'
 			}
 			$ReadTime = $ReadTime+3
 			Instal # Call Instal function.
