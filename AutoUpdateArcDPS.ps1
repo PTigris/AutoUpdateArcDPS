@@ -1,7 +1,7 @@
 # This script is created by Panthera Tigris.
 
 $ReadTime = 0
-$Path = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition) # Instalation path of Guild Wars 2, where Gw2-64.exe is hiding.
+$Path = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition) # Installation path of Guild Wars 2, where Gw2-64.exe is hiding.
 $Web = New-Object Net.WebClient # Get ley line thingy.
 # Get last modified date and time:
 "Getting last modified date and time from www.deltaconnected.com"
@@ -38,7 +38,7 @@ if (Test-Path ($Path+"\bin64")) {
 	
 	# If both files are pressent:
 	if ((Test-Path ($Path+"\bin64\Last modified ArcDPS.txt")) -and (Test-Path ($Path+"\bin64\d3d9.dll"))) {
-		$File = new-object System.IO.StreamReader($Path+"\bin64\Last modified ArcDPS.txt") # Read Last modified ArcDPS.txt to get the last modified date and time of the installed version.
+		$File = new-object System.IO.StreamReader($Path+"\bin64\Last modified ArcDPS.txt") # Read "Last modified ArcDPS.txt" to get the last modified date and time of the installed version.
 		$DateTimeFile = $File.ReadLine()
 		$File.close()
 		"Date and time last modified of the installed version is "+$DateTimeFile
@@ -69,7 +69,7 @@ if (Test-Path ($Path+"\bin64")) {
 			} elseif (Test-Path ($Path+"\bin64\d3d9.dll")) {
 				'Cannot find "Last modified ArcDPS.txt". Welcome to AutoUpdateArcDPS!'
 			} else {
-				'"Last modified ArcDPS.txt" and d3d9.dll are not pressent. Welcome to ArcDPS!, installing...'
+				'"Last modified ArcDPS.txt" and d3d9.dll are not present. Welcome to ArcDPS!, installing...'
 			}
 			$ReadTime = $ReadTime+3
 			Instal # Call Instal function.
@@ -102,5 +102,3 @@ if ($WrongFolder) {
 }
 "This window closes automatically after "+$ReadTime+" seconds."
 Sleep $ReadTime
-
-
