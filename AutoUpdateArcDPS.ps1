@@ -59,7 +59,7 @@ if (Test-Path ($Path+"\bin64")) {
 			"There is no newer version of ArcDPS."
 			$ReadTime = $ReadTime+2
 		}
-	} else { # If DateTime file and/or d3d9.dll are not pressent:
+	} else { # If DateTime file and/or d3d9.dll are not present:
 		if ($GuildWarsRunning) {
 			"Cannot install while Guild Wars 2 is running."
 			$ReadTime = $ReadTime+2
