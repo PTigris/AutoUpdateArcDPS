@@ -65,11 +65,11 @@ if (Test-Path ($Path+"\bin64")) {
 			$ReadTime = $ReadTime+2
 		} else {
 			if (Test-Path ($Path+"\bin64\Last modified ArcDPS.txt")) {
-				'Cannot find "d3d9.dll", installing...'
+				'Cannot find "d3d9.dll". Installing...'
 			} elseif (Test-Path ($Path+"\bin64\d3d9.dll")) {
 				'Cannot find "Last modified ArcDPS.txt". Welcome to AutoUpdateArcDPS!'
 			} else {
-				'"Last modified ArcDPS.txt" and d3d9.dll are not present. Welcome to ArcDPS!, installing...'
+				'"Last modified ArcDPS.txt" and d3d9.dll are not present. Welcome to ArcDPS! Installing...'
 			}
 			$ReadTime = $ReadTime+3
 			Instal # Call Instal function.
